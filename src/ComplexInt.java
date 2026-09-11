@@ -36,6 +36,10 @@ public class ComplexInt {
     public ComplexInt SubtractComplexInt(ComplexInt number1, ComplexInt number2) {
         return new ComplexInt((number1.real - number2.real), (number1.imaginary - number2.imaginary));
     }
-    public ComplexInt MultiplyComplexInt(ComplexInt number1, ComplexInt number2) {}
-    public ComplexInt DivideComplexInt(ComplexInt number1, ComplexInt number2) {}
+    public ComplexInt MultiplyComplexInt(ComplexInt number1, ComplexInt number2) {
+        return new ComplexInt();
+    }
+    public ComplexInt DivideComplexInt(ComplexInt number1, ComplexInt number2) {
+        return new ComplexInt();
+    }
 }
