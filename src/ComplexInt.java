@@ -1,7 +1,7 @@
 public class ComplexInt {
     //attributes:
-    int real;
-    int imaginary;
+    private final int real;
+    private final int imaginary;
     //Constructors:
     ComplexInt(int real, int imaginary) {
         this.real = real;
@@ -16,30 +16,29 @@ public class ComplexInt {
         this.imaginary = 0;
     }
     //Methods:
-    public int ComplexReal(ComplexInt number) {
-        return number.real;
+    public int ComplexReal() {
+        return real;
     }
-    public int ComplexImaginary(ComplexInt number) {
-        return number.imaginary;
+    public int ComplexImaginary() {
+        return imaginary;
     }
     //returns Cartesian Coordinates of a Complex number
-    public int[]  ComplexArray(ComplexInt number) {
-        return new int[] {number.real, number.imaginary};
+    public int[]  ComplexArray() {
+        return new int[] {real, imaginary};
     }
-    public ComplexInt ComplexConjugate(ComplexInt number) {
-        return new ComplexInt(number.real, -(number.imaginary));
-    }
-    /*takes to Complex Integers, each in the form a +ib, as an Input*/
-    public ComplexInt AddComplexInt(ComplexInt number1, ComplexInt number2) {
+    public ComplexInt ComplexConjugate() { return new ComplexInt(real, -imaginary);}
+    /*takes 2 ComplexInt-Objects, each in the form a +ib, as an Input*/
+    public static ComplexInt AddComplexInt(ComplexInt number1, ComplexInt number2) {
         return new ComplexInt((number1.real + number2.real), (number1.imaginary + number2.imaginary));
     }
-    public ComplexInt SubtractComplexInt(ComplexInt number1, ComplexInt number2) {
+    public static ComplexInt SubtractComplexInt(ComplexInt number1, ComplexInt number2) {
         return new ComplexInt((number1.real - number2.real), (number1.imaginary - number2.imaginary));
     }
-    public ComplexInt MultiplyComplexInt(ComplexInt number1, ComplexInt number2) {
-        return new ComplexInt();
+    public static ComplexInt MultiplyComplexInt(ComplexInt number1, ComplexInt number2) {
+        return new ComplexInt((number1.real*number2.real-number1.imaginary*number2.imaginary),
+                (number1.real* number2.imaginary+ number2.real* number1.imaginary));
     }
-    public ComplexInt DivideComplexInt(ComplexInt number1, ComplexInt number2) {
+    public static ComplexInt DivideComplexInt(ComplexInt number1, ComplexInt number2) {
         return new ComplexInt();
     }
 }
