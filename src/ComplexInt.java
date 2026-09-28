@@ -3,17 +3,17 @@ public class ComplexInt {
     private final int real;
     private final int imaginary;
     //Constructors:
-    ComplexInt(int real, int imaginary) {
+    public ComplexInt(int real, int imaginary) {
         this.real = real;
         this.imaginary = imaginary;
     }
-    ComplexInt(int real) {
+    public ComplexInt(int real) {
         this.real = real;
-        this.imaginary = 0;
+        imaginary = 0;
     }
-    ComplexInt() {
-        this.real = 0;
-        this.imaginary = 0;
+    public ComplexInt() {
+        real = 0;
+        imaginary = 0;
     }
     //Instance-Methods:
     public int ComplexReal() {
@@ -52,7 +52,7 @@ public class ComplexInt {
         else {
             return new ComplexInt((int)(polar[0]*Math.cos(polar[1])), (int)Math.sin(polar[1]));}
     }
-    /*takes 2 ComplexInt-Objects, each in the form a +ib, as an Input*/
+    /*takes 2 ComplexInt-Objects, each in the Cartesian Form, as an Input*/
     public static ComplexInt AddComplexInt(ComplexInt number1, ComplexInt number2) {
         return new ComplexInt((number1.real + number2.real), (number1.imaginary + number2.imaginary));
     }
