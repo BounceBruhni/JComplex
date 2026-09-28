@@ -5,27 +5,19 @@ public class ComplexInt {
     //Constructors:
     public ComplexInt(int real, int imaginary) {
         this.real = real;
-        this.imaginary = imaginary;
-    }
+        this.imaginary = imaginary;}
     public ComplexInt(int real) {
         this.real = real;
-        imaginary = 0;
-    }
+        imaginary = 0;}
     public ComplexInt() {
         real = 0;
-        imaginary = 0;
-    }
+        imaginary = 0;}
     //Instance-Methods:
-    public int ComplexReal() {
-        return real;
-    }
-    public int ComplexImaginary() {
-        return imaginary;
-    }
+    public int ComplexReal() {return real;}
+    public int ComplexImaginary() {return imaginary;}
+
     //returns Cartesian Coordinates of a Complex number
-    public int[]  ComplexArray() {
-        return new int[] {real, imaginary};
-    }
+    public int[]  ComplexArray() {return new int[] {real, imaginary};}
     public ComplexInt ComplexConjugate() { return new ComplexInt(real, -imaginary);}
     public int Scale() {
         return (int) Math.sqrt(Math.pow(this.real, 2) + Math.pow(this.imaginary, 2));}
